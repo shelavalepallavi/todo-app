@@ -44,7 +44,7 @@ const Sidebar = ({ activeMenu, setActiveMenu, theme = { theme } }) => {
           alt=""
           className="w-[118px] h-[118px] rounded-full object-cover"
         />
-        <p className="text-[15px] font-medium leading-[20px] text-[#1B281B] -ml-[8px]">
+        <p className={`text-[15px] font-medium leading-[20px]  -ml-[8px] ${theme === 'light'?"text-[#1B281B]":"text-[#EBEBEB]"}`}>
           Hey, ABCD
         </p>
       </div>

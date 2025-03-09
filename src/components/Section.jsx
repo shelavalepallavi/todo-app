@@ -11,22 +11,28 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo, theme })
     <div className={` w-md flex flex-col py-10 ps-6 relative ${theme === 'light'? 'bg-[#EEF6EF]':'bg-[#2C2C2C] '}`}>
       <div className="flex items-center justify-between border-t border-[rgba(73,110,75,0.2)] py-6 ps-2 pr-5">
         <div className="flex items-center gap-3">
-          <input
-            type="checkbox"
-            className="appearance-none w-5 h-5 bg-white border-2 border-[#1E1E1E] rounded-sm cursor-pointer relative checked:bg-green-800 checked:border-none checked:after:content-['✓'] checked:after:text-white 
-                checked:after:font-medium
-                checked:after:absolute
-                checked:after:left-[4px] "
-          />
+        <input
+                  type="checkbox"
+                  className={`appearance-none w-5 h-5  border-2 rounded-sm cursor-pointer relative checked:bg-green-800 checked:border-none checked:after:content-['✓'] checked:after:text-white 
+                  checked:after:font-medium
+                  checked:after:absolute
+                  checked:after:left-[4px] ${theme === 'light'? "bg-white border-[#1E1E1E]":"bg-[#242424] border-white"}`}
+                />
           <p className={` text-[15px] font-normal leading-5 ${theme==='light'?"text-[#1B281B]":"text-[#f5f5f5]"}`}>
             {selectedItem.text}
           </p>
         </div>
-        <img
-          src="/assets/star.svg"
-          alt="star"
-          className="w-5 h-5 cursor-pointer "
-        />
+        <div>
+            {theme === 'light'? (<img
+              src="/assets/star.svg"
+              alt="star"
+              className="w-5 h-5 cursor-pointer "
+            />):(<img
+              src="/assets/star-white.svg"
+              alt="star"
+              className="w-5 h-5 cursor-pointer "
+            />)}
+            </div>
       </div>
       <div className="flex items-center gap-6 border-t border-[rgba(73,110,75,0.2)] py-6 ps-2">
         <div>
@@ -127,7 +133,7 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo, theme })
         </p>
       </div>
       <div className=" border-t border-[rgba(73,110,75,0.2)] py-6 ps-8">
-        <p className="text-[#1B281B96] text-[15px] font-normal leading-5">
+        <p className={`text-[15px] font-normal leading-5 ${theme === 'light'?"text-[#1B281B96]":"text-[#f5f5f5]"} `}>
           Add Note
         </p>
       </div>
