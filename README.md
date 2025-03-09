@@ -2,7 +2,6 @@
 A simple and efficient To-Do App built with the MERN stack, allowing users to manage tasks effectively. Users can create, update, delete, and mark tasks as complete.
 
 
-(Replace this with an actual screenshot of your app)
 
 🚀 Features
 ✅ User Authentication – Register/Login with JWT authentication
