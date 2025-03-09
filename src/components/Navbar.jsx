@@ -3,10 +3,11 @@ import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from "../redux/authSlice";
 import Login from './Login';
 
-const Navbar = ({ setOpen, toggleTheme, theme }) => {
+const Navbar = ({ setOpen, toggleTheme, theme, setShowLogin }) => {
+
   const dispatch = useDispatch();
   const { isAuthenticated, user } = useSelector((state) => state.auth);
-  const [showLogin, setShowLogin] = useState(false);
+  
   const handleClick = () => {
     setOpen((prev) => !prev);
   };
@@ -57,7 +58,9 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
         {isAuthenticated ? (
         <div className="">
           <button
-            onClick={() => dispatch(logout())}
+            onClick={() => {
+              dispatch(logout());
+            }}
             className="bg-green-900 text-white px-4 py-2 rounded cursor-pointer"
           >
             Logout
@@ -65,7 +68,9 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
         </div>
       ) : (
         <button
-        onClick={() => setShowLogin(true)} // Mock login
+        onClick={() => {
+          setShowLogin(true)
+        }} // Mock login
           className="bg-green-900 text-white px-4 py-2 rounded cursor-pointer"
         >
           Login
@@ -74,7 +79,7 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
       </div>
       
     </div>
-    {showLogin && <Login setShowLogin={setShowLogin} />}
+    
     </>
   );
 };

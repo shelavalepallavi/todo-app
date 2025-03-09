@@ -7,10 +7,7 @@ const storedAuth = JSON.parse(localStorage.getItem("auth")) || {
 
 const authSlice = createSlice({
   name: "auth",
-  initialState: {
-    isAuthenticated: false,
-    user: null, 
-  },
+  initialState: storedAuth, // ✅ Use stored auth data
   reducers: {
     login: (state, action) => {
       state.isAuthenticated = true;

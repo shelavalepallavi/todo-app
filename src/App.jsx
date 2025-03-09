@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Sidebar from './components/Sidebar';
 import Container from './components/Container';
 import Section from './components/Section';
+import Login from './components/Login';
 
 const App = () => {
   const [open, setOpen] = useState(true)
@@ -10,6 +11,7 @@ const App = () => {
   const [viewDetail, setViewDetail] = useState(false)
   const [selectedItem, setSelectedItem] = useState(null);
   const [deleteTodo, setDeleteTodo] = useState(null);
+  const [showLogin, setShowLogin] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
 
   useEffect(() => {
@@ -18,16 +20,18 @@ const App = () => {
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    setTheme(theme === "light" ? "dark" : "light");
   };
+
   return (
-    <div className='w-full flex flex-col px-12'>
-      <Navbar setOpen={setOpen} toggleTheme={toggleTheme} theme={theme}/>
-      <div className='flex gap-12 '>
+    <div className='w-full flex flex-col px-4 lg:px-12'>
+      <Navbar setOpen={setOpen} toggleTheme={toggleTheme} theme={theme} setShowLogin={setShowLogin}/>
+      <div className='flex gap-2 lg:gap-12 '>
         {open && <Sidebar activeMenu={activeMenu} setActiveMenu={setActiveMenu} theme={theme}/>}
         <Container activeMenu={activeMenu} viewDetail={viewDetail} setViewDetail={setViewDetail} setSelectedItem={setSelectedItem} setDeleteTodo={setDeleteTodo} theme={theme}/>
         {viewDetail && <Section viewDetail={viewDetail} setViewDetail={setViewDetail} selectedItem={selectedItem} deleteTodo={deleteTodo} theme={theme}/>}
       </div>
+      {showLogin && <Login setShowLogin={setShowLogin} theme={theme}/>}
     </div>
   )
 }

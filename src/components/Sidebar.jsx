@@ -34,9 +34,9 @@ const Sidebar = ({ activeMenu, setActiveMenu, theme = { theme } }) => {
 
   return (
     <div
-      className={`w-[280px] h-[850px] flex flex-col gap-[9px] mt-[103px]  relative  p-5 transition-transform duration-300 ease-in-out ${
+      className={`w-[280px] h-[850px] flex flex-col gap-[9px] mt-[103px]  relative  p-5 transition-all duration-300 ease-in-out  ${
         theme === "light" ? "bg-[#EEF6EF]" : "bg-[#2C2C2C]"
-      } `}
+      }  `}
     >
       <div className="flex flex-col items-center gap-[15px] mt-[-60px] ml-[9px]">
         <img
