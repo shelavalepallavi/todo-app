@@ -33,11 +33,11 @@ npm run dev
 ### Desktop
 ![Desktop Page](public/screenshots/desktop.png)
 
-### Laptop
-![Laptop Task](public/screenshots/laptop.png)
+### Tablet
+![Tablet page](public/screenshots/laptop.png)
 
 ### Mobile
-![Mobile Task](public/screenshots/mobile.png)
+![Mobile page](public/screenshots/mobile.png)
 
 
 💡 Future Enhancements
