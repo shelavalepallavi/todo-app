@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+[data-theme="light"] {
+  --background: #FBFDFC;
+  --text: #1B281B;
+}
+
+[data-theme="dark"] {
+  --background: #242424;
+  --text: #ffffff;
+}
+
+body{
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Outfit';
+}
+
