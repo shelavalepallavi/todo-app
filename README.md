@@ -11,10 +11,10 @@ User authentication
 ## Screenshots
 
 ### Desktop
-![Desktop Page](assets/desktop.png)
+![Desktop Page](public/screenshots/desktop.png)
 
 ### Laptop
-![Laptop Task](assets/laptop.png)
+![Laptop Task](public/screenshots/laptop.png)
 
 ### Mobile
-![Mobile Task](assets/mobile.png)
+![Mobile Task](public/screenshots/mobile.png)
