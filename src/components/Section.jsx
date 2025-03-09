@@ -23,20 +23,20 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo }) => {
           </p>
         </div>
         <img
-          src="/src/assets/star.svg"
+          src="/assets/star.svg"
           alt="star"
           className="w-5 h-5 cursor-pointer "
         />
       </div>
       <div className="flex items-center gap-6 border-t border-[rgba(73,110,75,0.2)] py-6 ps-2">
-        <img src="/src/assets/plus.svg" alt="" className="w-6 cursor-pointer" />
+        <img src="/assets/plus.svg" alt="" className="w-6 cursor-pointer" />
         <p className="text-[#1B281B] text-[15px] font-normal leading-5">
           Add Step
         </p>
       </div>
       <div className="flex items-center gap-6 border-t border-[rgba(73,110,75,0.2)] py-6 ps-2">
         <img
-          src="/src/assets/notification.svg"
+          src="/assets/notification.svg"
           alt=""
           className="w-6 cursor-pointer"
         />
@@ -51,7 +51,7 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo }) => {
       >
         <div className="flex items-center gap-6">
           <img
-            src="/src/assets/calender.svg"
+            src="/assets/calender.svg"
             alt=""
             className="w-6 cursor-pointer"
             onClick={() => setShowCalendar(!showCalendar)}
@@ -75,7 +75,7 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo }) => {
       </div>
       <div className="flex items-center gap-6 border-t border-[rgba(73,110,75,0.2)] py-6 ps-2">
         <img
-          src="/src/assets/repeat.svg"
+          src="/assets/repeat.svg"
           alt=""
           className="w-6 cursor-pointer"
         />
@@ -90,7 +90,7 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo }) => {
       </div>
       <div className="border-t border-[rgba(73,110,75,0.2)] flex  items-center gap-30 py-6 px-3 fixed bottom-0 ">
         <img
-          src="/src/assets/close.svg"
+          src="/assets/close.svg"
           alt=""
           className="w-[14px] cursor-pointer"
           onClick={() => setViewDetail(!viewDetail)}
@@ -99,7 +99,7 @@ const Section = ({ viewDetail, setViewDetail, selectedItem, deleteTodo }) => {
           Created Today
         </p>
         <img
-  src="/src/assets/delete.svg"
+  src="/assets/delete.svg"
   alt="delete"
   className="w-6 cursor-pointer"
   onClick={() => {

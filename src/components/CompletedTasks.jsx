@@ -30,7 +30,7 @@ const CompletedTasks = () => {
               {task}
             </p>
           </div>
-          <img src="/src/assets/star.svg" alt="Star Icon" className="w-5 h-5" />
+          <img src="/assets/star.svg" alt="Star Icon" className="w-5 h-5" />
         </div>
       ))}
     </div>

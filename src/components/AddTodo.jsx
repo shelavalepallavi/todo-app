@@ -75,9 +75,9 @@ const AddTodo = ({addTodo, changeStyle, setChangeStyle}) => {
       
       <div className="flex justify-between items-end ">
         <div className="flex gap-6">
-          <img src="/src/assets/notification.svg" alt="Notification" className="w-6 h-6 cursor-pointer" />
-          <img src="/src/assets/repeat.svg" alt="Repeat" className="w-6 h-6 cursor-pointer" onClick={()=> setChangeStyle(!changeStyle)} />
-          <img src="/src/assets/calender.svg" alt="Calendar" className="w-6 h-6 cursor-pointer" />
+          <img src="/assets/notification.svg" alt="Notification" className="w-6 h-6 cursor-pointer" />
+          <img src="/assets/repeat.svg" alt="Repeat" className="w-6 h-6 cursor-pointer" onClick={()=> setChangeStyle(!changeStyle)} />
+          <img src="/assets/calender.svg" alt="Calendar" className="w-6 h-6 cursor-pointer" />
         </div>
         <button className="bg-[#35793729] border-0 outline-none px-4 py-2 rounded-lg text-[#357937] text-[15px] font-semibold leading-5 cursor-pointer" onClick={handleAdd}>
           ADD TASK

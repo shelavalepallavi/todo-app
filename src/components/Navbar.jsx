@@ -18,14 +18,14 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
       <div className="flex gap-6">
         <div>
           {theme === 'light'?(
-            <img src="/src/assets/menu.svg" alt="Menu" onClick={handleClick} className="cursor-pointer" />
+            <img src="/assets/menu.svg" alt="Menu" onClick={handleClick} className="cursor-pointer" />
           ):(
-            <img src="/src/assets/menu-white.svg" alt="Menu" onClick={handleClick} className="cursor-pointer" />
+            <img src="/assets/menu-white.svg" alt="Menu" onClick={handleClick} className="cursor-pointer" />
           )}
         
         </div>
         <div className="flex items-center gap-1">
-          <img src="/src/assets/logo.svg" alt="Logo" className="w-[26.63px] h-[26.63px] cursor-pointer" />
+          <img src="/assets/logo.svg" alt="Logo" className="w-[26.63px] h-[26.63px] cursor-pointer" />
           <p className="font-sen text-2xl font-bold leading-6 tracking-[-0.04em] text-[#3F9142]">DoIt</p>
         </div>
       </div>
@@ -34,22 +34,22 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
       <div className="flex gap-6">
         <div>
           {theme === 'light'? (
-            <img src="/src/assets/search.svg" alt="Search" className="w-6 cursor-pointer" />
+            <img src="/assets/search.svg" alt="Search" className="w-6 cursor-pointer" />
           ):(
-            <img src="/src/assets/search-white.svg" alt="Search" className="w-6 cursor-pointer" />
+            <img src="/assets/search-white.svg" alt="Search" className="w-6 cursor-pointer" />
           )}
         </div>
         <div>
           {theme === 'light'?(
-            <img src="/src/assets/app-grid.svg" alt="Apps" className="w-6 cursor-pointer" />
+            <img src="/assets/app-grid.svg" alt="Apps" className="w-6 cursor-pointer" />
           ):(
-            <img src="/src/assets/grid-white.svg" alt="Apps" className="w-6 cursor-pointer" />
+            <img src="/assets/grid-white.svg" alt="Apps" className="w-6 cursor-pointer" />
           )}
         
         </div>
         <div onClick={toggleTheme} className=''>
           {theme === 'light'? (
-            <img src="/src/assets/moon.svg" alt="Dark Mode" className="w-6 cursor-pointer" />):( <img src="/src/assets/sun.svg" alt="Dark Mode" className="w-6 cursor-pointer" />)}
+            <img src="/assets/moon.svg" alt="Dark Mode" className="w-6 cursor-pointer" />):( <img src="/assets/sun.svg" alt="Dark Mode" className="w-6 cursor-pointer" />)}
         
        
         </div>

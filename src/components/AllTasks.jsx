@@ -43,7 +43,7 @@ const AllTasks = ({ todos, setViewDetail, setSelectedItem }) => {
               </div>
               <div>
                 <img
-                  src="/src/assets/star.svg"
+                  src="/assets/star.svg"
                   alt="star"
                   className="w-5 h-5 cursor-pointer "
                 />

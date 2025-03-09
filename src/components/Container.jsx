@@ -52,7 +52,7 @@ useEffect(() => {
     <div className='flex flex-col flex-1 py-6'>
       <div className='flex items-center py-1'>
       <p className='text-sm font-medium text-[#142E159E] leading-4'>To Do</p>
-      <img src="/src/assets/down.svg" alt="" />
+      <img src="/assets/down.svg" alt="" />
       </div>
       {!isAuthenticated ? (
         <Login />
