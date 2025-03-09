@@ -1,14 +1,35 @@
-To-Do App
-A simple, user-friendly To-Do app built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to manage tasks, marking them as complete or incomplete, and adding, editing, or deleting tasks.
+📋 To-Do App
+A simple and efficient To-Do App built with the MERN stack, allowing users to manage tasks effectively. Users can create, update, delete, and mark tasks as complete.
 
-Features
-Add new tasks
-Mark tasks as completed
-Edit and delete tasks
-Simple, responsive design
-User authentication 
 
-## Screenshots
+(Replace this with an actual screenshot of your app)
+
+🚀 Features
+✅ User Authentication – Register/Login with JWT authentication
+📝 Add Tasks – Easily create new tasks
+✏️ Edit Tasks – Modify existing tasks
+✅ Mark as Complete – Strike through completed tasks
+🗑️ Delete Tasks – Remove unwanted tasks
+🎨 Responsive UI – Works seamlessly on all devices
+
+🛠️ Tech Stack
+Frontend: React.js, Tailwind CSS
+State Management: React Hooks
+
+🏗️ Installation & Setup
+1️⃣ Clone the Repository
+git clone https://github.com/shelavalepallavi/todo-app
+cd todo-app
+
+3️⃣ Frontend Setup
+cd todo-app
+npm install
+
+Start the frontend server:
+npm run dev
+
+
+📸 Screenshots
 
 ### Desktop
 ![Desktop Page](public/screenshots/desktop.png)
@@ -18,3 +39,11 @@ User authentication
 
 ### Mobile
 ![Mobile Task](public/screenshots/mobile.png)
+
+
+💡 Future Enhancements
+🌙 Dark Mode
+📆 Due Date Reminders
+📂 Categories for Tasks
+
+🔗 https://github.com/shelavalepallavi/todo-app
