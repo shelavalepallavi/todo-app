@@ -1,16 +1,43 @@
 import React from "react";
 
-const Sidebar = ({ activeMenu, setActiveMenu, theme={theme} }) => {
+const Sidebar = ({ activeMenu, setActiveMenu, theme = { theme } }) => {
   const menuItems = [
-    { icon: "/assets/alltasks.svg", label: "All Tasks" },
-    { icon: "/assets/today.svg", label: "Today" },
-    { icon: "/assets/important.svg", label: "Important" },
-    { icon: "/assets/planned.svg", label: "Planned" },
-    { icon: "/assets/assigned.svg", label: "Assigned to me" },
+    {
+      icon:
+        theme === "light"
+          ? "/assets/alltasks.svg"
+          : "/assets/alltasks-white.svg",
+      label: "All Tasks",
+    },
+    {
+      icon: theme === "light" ? "/assets/today.svg" : "/assets/today-white.svg",
+      label: "Today",
+    },
+    {
+      icon:
+        theme === "light" ? "/assets/important.svg" : "/assets/star-white.svg",
+      label: "Important",
+    },
+    {
+      icon:
+        theme === "light" ? "/assets/planned.svg" : "/assets/planned-white.svg",
+      label: "Planned",
+    },
+    {
+      icon:
+        theme === "light"
+          ? "/assets/assigned.svg"
+          : "/assets/assigned-white.svg",
+      label: "Assigned to me",
+    },
   ];
 
   return (
-    <div className={`w-[280px] h-[850px] flex flex-col gap-[9px] mt-[103px]  relative  p-5 transition-transform duration-300 ease-in-out ${theme === 'light'? "bg-[#EEF6EF]": "bg-[#2C2C2C]"} `}>
+    <div
+      className={`w-[280px] h-[850px] flex flex-col gap-[9px] mt-[103px]  relative  p-5 transition-transform duration-300 ease-in-out ${
+        theme === "light" ? "bg-[#EEF6EF]" : "bg-[#2C2C2C]"
+      } `}
+    >
       <div className="flex flex-col items-center gap-[15px] mt-[-60px] ml-[9px]">
         <img
           src="/assets/profile.jpeg"
@@ -22,28 +49,48 @@ const Sidebar = ({ activeMenu, setActiveMenu, theme={theme} }) => {
         </p>
       </div>
 
-      <div className={`flex flex-col py-6 ${theme === 'light'?"bg-[#FBFDFC]":"bg-[#232323]"}`}>
+      <div
+        className={`flex flex-col py-6 ${
+          theme === "light" ? "bg-[#FBFDFC]" : "bg-[#232323]"
+        }`}
+      >
         {menuItems.map((item, index) => (
           <div
             key={index}
-            className={`flex gap-4 p-2 rounded-md cursor-pointer transition-all ${
-              activeMenu === index ? "bg-[#EEF6EF] text-[#357937]" : ""
-            }`}
+            className={`flex gap-4 p-2 rounded-md cursor-pointer transition-all 
+              ${
+                activeMenu === index
+                  ? theme === "light"
+                    ? "bg-[#EEF6EF] text-[#357937]"
+                    : "bg-[#35793729] text-[#98E19B]"
+                  : ""
+              }`}
             onClick={() => setActiveMenu(index)}
           >
             <img
               src={item.icon}
               alt=""
-              className={`w-6 h-6 cursor-pointer ${
-                activeMenu === index
-                  ? "filter brightness-75 sepia-[99%] saturate-[665%] hue-rotate-[93deg]"
-                  : ""
-              }`}
+              className={`w-6 h-6 cursor-pointer 
+    ${
+      activeMenu === index
+        ? theme === "dark"
+          ? "filter brightness-0 invert-[72%] sepia-[22%] saturate-[180%] hue-rotate-[60deg]"
+          : "filter brightness-75 sepia-[99%] saturate-[665%] hue-rotate-[93deg]"
+        : ""
+    }`}
             />
+
             <p
               className={`text-[15px] font-medium leading-5 cursor-pointer ${
-                activeMenu === index ? "text-[#357937]" : "text-[#1B281B]"
-              }`}
+                theme === "light" ? "text-[#1B281B]" : "text-[#ffffff]"
+              }  ${activeMenu === index 
+      ? theme === "dark" 
+        ? "text-[rgb(87,227,91)]"  // Dark mode + active
+        : "text-[#357937]"  // Light mode + active
+      : theme === "dark" 
+        ? "text-[#98E19B]"   // Dark mode + inactive
+        : "text-[#1B281B]"   // Light mode + inactive
+    }`}
             >
               {item.label}
             </p>
@@ -51,12 +98,34 @@ const Sidebar = ({ activeMenu, setActiveMenu, theme={theme} }) => {
         ))}
       </div>
 
-      <div className="bg-[#FBFDFC] p-8 flex gap-4">
-        <img src="/assets/plus.svg" alt="" className="w-6 h-6 cursor-pointer" />
+      <div
+        className={`${
+          theme === "light" ? "bg-[#EEF6EF]" : "bg-[#232323]"
+        } p-8 flex gap-4`}
+      >
+        <div>
+          {theme === "light" ? (
+            <img
+              src="/assets/plus.svg"
+              alt=""
+              className="w-6 h-6 cursor-pointer"
+            />
+          ) : (
+            <img
+              src="/assets/plus-white.svg"
+              alt=""
+              className="w-6 h-6 cursor-pointer"
+            />
+          )}
+        </div>
         <p className="text-[15px] font-medium cursor-pointer">Add list</p>
       </div>
 
-      <div className="bg-white p-4 flex flex-col mt-2 shadow-sm">
+      <div
+        className={`${
+          theme === "light" ? "bg-[#EEF6EF]" : "bg-[#232323]"
+        } p-4 flex flex-col mt-2 shadow-sm`}
+      >
         <div className="px-5 flex justify-between items-start">
           <div className="flex flex-col gap-1">
             <p className="text-[13.3px] font-medium">Today Tasks</p>

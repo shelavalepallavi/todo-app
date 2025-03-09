@@ -6,7 +6,7 @@ import AllTasks from './AllTasks'
 import { useSelector } from 'react-redux'
 import Login from './Login'
 
-const Container = ({activeMenu, viewDetail, setViewDetail, setSelectedItem, setDeleteTodo}) => {
+const Container = ({activeMenu, viewDetail, setViewDetail, setSelectedItem, setDeleteTodo, theme}) => {
 
   const [todos, setTodos] = useState([])
   const [changeStyle, setChangeStyle] = useState(false)
@@ -51,16 +51,16 @@ useEffect(() => {
   return (
     <div className='flex flex-col flex-1 py-6'>
       <div className='flex items-center py-1'>
-      <p className='text-sm font-medium text-[#142E159E] leading-4'>To Do</p>
+      <p className={`text-sm font-medium  leading-4 ${theme === 'light'? "text-[#142E159E]": "text-[#97fb9b]"}`}>To Do</p>
       <img src="/assets/down.svg" alt="" />
       </div>
       {!isAuthenticated ? (
         <Login />
       ) : (
        <div>
-         <AddTodo addTodo={addTodo} changeStyle={changeStyle} setChangeStyle={setChangeStyle} />
-      {activeMenu === 0 && <AllTasks todos={todos}  viewDetail={viewDetail} setViewDetail={setViewDetail} setSelectedItem={setSelectedItem}/>}
-      {activeMenu === 1 && <TodaysTask todos={todos}  viewDetail={viewDetail} setViewDetail={setViewDetail} setSelectedItem={setSelectedItem} changeStyle={changeStyle}/>}
+         <AddTodo addTodo={addTodo} changeStyle={changeStyle} setChangeStyle={setChangeStyle} theme={theme}/>
+      {activeMenu === 0 && <AllTasks todos={todos}  viewDetail={viewDetail} setViewDetail={setViewDetail} setSelectedItem={setSelectedItem} theme={theme}/>}
+      {activeMenu === 1 && <TodaysTask todos={todos}  viewDetail={viewDetail} setViewDetail={setViewDetail} setSelectedItem={setSelectedItem} changeStyle={changeStyle} theme={theme}/>}
       <CompletedTasks/>
        </div>
       )}

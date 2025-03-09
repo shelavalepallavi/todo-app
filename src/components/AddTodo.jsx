@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { fetchWeather } from '../redux/weatherActions';
 import { useDispatch, useSelector } from 'react-redux';
 
-const AddTodo = ({addTodo, changeStyle, setChangeStyle}) => {
+const AddTodo = ({addTodo, changeStyle, setChangeStyle, theme}) => {
   const [task, setTask] = useState("");
   const [priority, setPriority] = useState("Medium");
   const [city, setCity] = useState("");
@@ -34,7 +34,7 @@ const AddTodo = ({addTodo, changeStyle, setChangeStyle}) => {
         <input
           type="text"
           placeholder="Add A Task"
-          className="bg-transparent border-0 outline-none text-[15px] font-medium leading-5 text-[#1B281BB8] w-full"
+          className={ `bg-transparent border-0 outline-none text-[15px] font-medium leading-5  w-full ${theme === 'light'? "text-[#1B281BB8]":"text-#ffffff" }`}
           value={task} onChange={(e) => setTask(e.target.value)}
         />
          <select value={priority} onChange={(e) => setPriority(e.target.value)} className="border p-2 rounded">
@@ -66,7 +66,7 @@ const AddTodo = ({addTodo, changeStyle, setChangeStyle}) => {
       {loading && <p>Loading weather...</p>}
       {error && <p className="text-red-500">{error}</p>}
       {weather && (
-        <div className="text-sm text-gray-700">
+        <div className={`text-sm  ${theme === 'light'? "text-[#1B281BB8]":"text-#ffffff" }`}>
           <p>🌡️ Temperature: {weather.temp}°C</p>
           <p>🌤️ Condition: {weather.description}</p>
         </div>

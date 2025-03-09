@@ -58,7 +58,7 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
         <div className="">
           <button
             onClick={() => dispatch(logout())}
-            className="bg-red-600 px-3 py-1 rounded cursor-pointer"
+            className="bg-green-900 text-white px-4 py-2 rounded cursor-pointer"
           >
             Logout
           </button>
@@ -66,7 +66,7 @@ const Navbar = ({ setOpen, toggleTheme, theme }) => {
       ) : (
         <button
         onClick={() => setShowLogin(true)} // Mock login
-          className="bg-blue-600 px-3 py-1 rounded cursor-pointer"
+          className="bg-green-900 text-white px-4 py-2 rounded cursor-pointer"
         >
           Login
         </button>
